@@ -14,19 +14,6 @@ const Popup = () => {
         backgroundColor: theme === 'light' ? '#eee' : '#222',
       }}>
       <header className="App-header" style={{ color: theme === 'light' ? '#222' : '#eee' }}>
-        <img src={chrome.runtime.getURL('newtab/logo.svg')} className="App-logo" alt="logo" />
-
-        <p>
-          Edit <code>pages/popup/src/Popup.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: theme === 'light' ? '#0281dc' : undefined, marginBottom: '10px' }}>
-          Learn React!
-        </a>
         <ToggleButton>Toggle theme</ToggleButton>
       </header>
     </div>

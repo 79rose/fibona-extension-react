@@ -3,7 +3,7 @@ import App from '@src/app';
 // eslint-disable-next-line
 // @ts-ignore
 import tailwindcssOutput from '@src/tailwind-output.css?inline';
-
+import radixThemesStyles from './radix-ui-output.css?inline';
 const root = document.createElement('div');
 root.id = 'chrome-extension-boilerplate-react-vite-content-view-root';
 
@@ -17,7 +17,7 @@ shadowRoot.appendChild(rootIntoShadow);
 
 /** Inject styles into shadow dom */
 const styleElement = document.createElement('style');
-styleElement.innerHTML = tailwindcssOutput;
+styleElement.innerHTML = tailwindcssOutput + radixThemesStyles;
 shadowRoot.appendChild(styleElement);
 
 createRoot(rootIntoShadow).render(<App />);
