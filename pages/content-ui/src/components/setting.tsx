@@ -1,9 +1,10 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 /**
  * @author leewahjoel
  * @description 插件-设置
  */
 
-import { CodepenCircleOutlined, MoonFilled, SunFilled } from '@ant-design/icons';
+import { MoonFilled, SunFilled } from '@ant-design/icons';
 import { exampleThemeStorage } from '@chrome-extension-boilerplate/storage';
 import { Popover, Segmented } from 'antd';
 
@@ -13,7 +14,23 @@ export default function Setting() {
     light: 'bg-gray-200 hover:bg-gray-50 text-gray-800',
     dark: 'bg-gray-800 hover:bg-gray-900 text-gray-100',
   };
-  const SliderContent = <div className="font-semibold">点击打开侧边栏</div>;
+  const openSidepanel = () => {
+    // chrome.runtime.sendMessage({ action: 'openSidebar' }, response => {
+    //   if (response.status === 'success') {
+    //     console.log('Sidebar opened successfully');
+    //   } else {
+    //     console.error('Failed to open sidebar:', response.message);
+    //   }
+    // });
+  };
+  const SliderContent = (
+    <>
+      {/*eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
+      <div onClick={openSidepanel}>
+        <span className="font-[1000]">Fibona</span>
+      </div>
+    </>
+  );
   const options = [
     {
       value: 'light',
@@ -35,15 +52,12 @@ export default function Setting() {
     },
   ];
   const settingContent = (
-    <div className="flex flex-col">
-      {/*eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
-      <div className={`flex items-center justify-center rounded-md  p-2 ${themeMap[theme]} mb-4`}>
-        <Segmented
-          options={options}
-          value={theme}
-          onChange={value => exampleThemeStorage.set(value as 'dark' | 'light')}
-        />
-      </div>
+    <div className={`flex items-center justify-center rounded-md  ${themeMap[theme]} `}>
+      <Segmented
+        options={options}
+        value={theme}
+        onChange={value => exampleThemeStorage.set(value as 'dark' | 'light')}
+      />
     </div>
   );
   return (

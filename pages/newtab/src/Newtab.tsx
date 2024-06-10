@@ -10,20 +10,14 @@ const Newtab = () => {
   return (
     <div className="App" style={{ backgroundColor: theme === 'light' ? '#eee' : '#222' }}>
       <header className="App-header" style={{ color: theme === 'light' ? '#222' : '#eee' }}>
-        <img src={chrome.runtime.getURL('newtab/logo.svg')} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>pages/newtab/src/Newtab.tsx</code> and save to reload.
+        <p className="text-[18px]">
+          Fibona AI助手
+          <span role="img" aria-label="rocket">
+            🚀
+          </span>
+          <p>这是一款AI助手，当您在浏览网页时，可以自动化构建您的知识图谱，帮助您更好的学习和工作。</p>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: theme === 'light' ? '#0281dc' : undefined, marginBottom: '10px' }}>
-          Learn React
-        </a>
-        <h6>The color of this paragraph is defined using SASS.</h6>
-        <ToggleButton>Toggle theme</ToggleButton>
+        <ToggleButton>切换主题</ToggleButton>
       </header>
     </div>
   );
