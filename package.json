@@ -1,12 +1,8 @@
 {
-  "name": "chrome-extension-boilerplate-react-vite",
+  "name": "chrome-extension-react-vite",
   "version": "0.0.1",
-  "description": "chrome extension boilerplate",
+  "description": "tentcent mini",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Jonghakseo/chrome-extension-boilerplate-react-vite.git"
-  },
   "scripts": {
     "clean": "rimraf dist && rimraf .turbo && turbo clean",
     "build": "turbo build",
@@ -22,6 +18,7 @@
   },
   "type": "module",
   "dependencies": {
+    "pnpm": "^9.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },

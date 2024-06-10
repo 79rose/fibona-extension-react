@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -578,10 +578,6 @@ video {
   top: 50%;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -742,12 +738,12 @@ video {
   padding-left: 1rem;
 }
 
-.font-bold {
-  font-weight: 700;
+.font-\[1000\] {
+  font-weight: 1000;
 }
 
-.font-semibold {
-  font-weight: 600;
+.font-bold {
+  font-weight: 700;
 }
 
 .text-gray-100 {

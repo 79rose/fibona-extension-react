@@ -18,12 +18,17 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.3.7",
     "@chrome-extension-boilerplate/shared": "workspace:*",
-    "@chrome-extension-boilerplate/storage": "workspace:*"
+    "@chrome-extension-boilerplate/storage": "workspace:*",
+    "@radix-ui/react-dialog": "^1.0.5",
+    "antd": "^5.18.0",
+    "react-icons": "^5.2.1",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@chrome-extension-boilerplate/hmr": "workspace:*",
     "@chrome-extension-boilerplate/tailwindcss-config": "workspace:*",
-    "@chrome-extension-boilerplate/tsconfig": "workspace:*",
-    "@chrome-extension-boilerplate/hmr": "workspace:*"
+    "@chrome-extension-boilerplate/tsconfig": "workspace:*"
   }
 }
